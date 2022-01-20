@@ -12,6 +12,25 @@ bot.command("start", (ctx) => {
   );
 });
 
+bot.command("casos", (ctx) => {
+  console.log(ctx.from);
+  bot.telegram.sendMessage(
+    ctx.chat.id,
+    "El oráculo predice que la cantidad de casos positivos de hoy será: " + (Math.floor(Math.random() * 100000)+60000),
+    {}
+  );
+});
+
+
+bot.command("mueltes", (ctx) => {
+  console.log(ctx.from);
+  bot.telegram.sendMessage(
+    ctx.chat.id,
+    "El oráculo predice que la cantidad de mueltes de hoy será: " + (Math.floor(Math.random() * 300)+50),
+    {}
+  );
+});
+
 bot.hears("animals", (ctx) => {
   console.log(ctx.from);
   let animalMessage = `great, here are pictures of animals you would love`;
