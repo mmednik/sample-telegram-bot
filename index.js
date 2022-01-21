@@ -31,6 +31,10 @@ bot.command("mueltes", (ctx) => {
   );
 });
 
+bot.command("foto", (ctx) => ctx.replyWithPhoto({ url: 'https://picsum.photos/200/300/?random' }))
+
+
+
 bot.hears("animals", (ctx) => {
   console.log(ctx.from);
   let animalMessage = `great, here are pictures of animals you would love`;
